@@ -1,0 +1,272 @@
+CREATE TABLE Tutor (
+    ID_Tutor INTEGER PRIMARY KEY,
+    Nome VARCHAR(100),
+    Endereco VARCHAR(100),
+    Telefone VARCHAR(100),
+    Email VARCHAR(100)
+);
+
+INSERT INTO Tutor (ID_Tutor, Nome, Endereco, Telefone, Email) 
+VALUES (1, 'Carlos Silva', 'Rua das Flores, 100', '11987654321', 'carlos.silva@gmail.com');
+
+INSERT INTO Tutor (ID_Tutor, Nome, Endereco, Telefone, Email) 
+VALUES (2, 'Maria Oliveira', 'Av. Paulista, 1500', '11987654322', 'maria.oliveira@gmail.com');
+
+INSERT INTO Tutor (ID_Tutor, Nome, Endereco, Telefone, Email) 
+VALUES (3, 'João Pereira', 'Rua das Palmeiras, 25', '11987654323', 'joao.pereira@gmail.com');
+
+INSERT INTO Tutor (ID_Tutor, Nome, Endereco, Telefone, Email) 
+VALUES (4, 'Ana Souza', 'Rua do Carmo, 400', '11987654324', 'ana.souza@gmail.com');
+
+INSERT INTO Tutor (ID_Tutor, Nome, Endereco, Telefone, Email) 
+VALUES (5, 'Pedro Santos', 'Rua das Laranjeiras, 120', '11987654325', 'pedro.santos@gmail.com');
+
+INSERT INTO Tutor (ID_Tutor, Nome, Endereco, Telefone, Email) 
+VALUES (6, 'Marcos Lima', 'Rua do Sol, 130', '11987654326', 'marcos.lima@gmail.com');
+
+INSERT INTO Tutor (ID_Tutor, Nome, Endereco, Telefone, Email) 
+VALUES (7, 'Fernanda Almeida', 'Av. Rio Branco, 200', '11987654327', 'fernanda.almeida@gmail.com');
+
+INSERT INTO Tutor (ID_Tutor, Nome, Endereco, Telefone, Email) 
+VALUES (8, 'Lucas Martins', 'Rua do Norte, 300', '11987654328', 'lucas.martins@gmail.com');
+
+INSERT INTO Tutor (ID_Tutor, Nome, Endereco, Telefone, Email) 
+VALUES (9, 'Juliana Costa', 'Rua do Sul, 400', '11987654329', 'juliana.costa@gmail.com');
+
+INSERT INTO Tutor (ID_Tutor, Nome, Endereco, Telefone, Email) 
+VALUES (10, 'Roberto Lima', 'Rua do Oeste, 500', '11987654330', 'roberto.lima@gmail.com');
+
+CREATE TABLE Paciente (
+    ID_Paciente INTEGER PRIMARY KEY,
+    Nome VARCHAR(100),
+    Especie VARCHAR(100),
+    Raca VARCHAR(100),
+    Idade VARCHAR(100),
+    Peso VARCHAR(100),
+    ID_Tutor INTEGER,
+    CONSTRAINT FK_Paciente_Tutor FOREIGN KEY (ID_Tutor) REFERENCES Tutor (ID_Tutor)
+);
+
+INSERT INTO Paciente (ID_Paciente, Nome, Especie, Raca, Idade, Peso, ID_Tutor) 
+VALUES (1, 'Max', 'Cachorro', 'Labrador', '5 anos', '25 kg', 1);
+
+INSERT INTO Paciente (ID_Paciente, Nome, Especie, Raca, Idade, Peso, ID_Tutor) 
+VALUES (2, 'Bella', 'Cachorro', 'Poodle', '3 anos', '7 kg', 2);
+
+INSERT INTO Paciente (ID_Paciente, Nome, Especie, Raca, Idade, Peso, ID_Tutor) 
+VALUES (3, 'Luna', 'Gato', 'Persa', '4 anos', '4 kg', 3);
+
+INSERT INTO Paciente (ID_Paciente, Nome, Especie, Raca, Idade, Peso, ID_Tutor) 
+VALUES (4, 'Thor', 'Cachorro', 'Bulldog', '2 anos', '15 kg', 4);
+
+INSERT INTO Paciente (ID_Paciente, Nome, Especie, Raca, Idade, Peso, ID_Tutor) 
+VALUES (5, 'Mia', 'Gato', 'Siamês', '6 anos', '5 kg', 5);
+
+INSERT INTO Paciente (ID_Paciente, Nome, Especie, Raca, Idade, Peso, ID_Tutor) 
+VALUES (6, 'Lola', 'Cachorro', 'Golden Retriever', '1 ano', '30 kg', 6);
+
+INSERT INTO Paciente (ID_Paciente, Nome, Especie, Raca, Idade, Peso, ID_Tutor) 
+VALUES (7, 'Zeus', 'Cachorro', 'Pastor Alemão', '7 anos', '35 kg', 7);
+
+INSERT INTO Paciente (ID_Paciente, Nome, Especie, Raca, Idade, Peso, ID_Tutor) 
+VALUES (8, 'Daisy', 'Cachorro', 'Beagle', '3 anos', '10 kg', 8);
+
+INSERT INTO Paciente (ID_Paciente, Nome, Especie, Raca, Idade, Peso, ID_Tutor) 
+VALUES (9, 'Chico', 'Pássaro', 'Papagaio', '10 anos', '1 kg', 9);
+
+INSERT INTO Paciente (ID_Paciente, Nome, Especie, Raca, Idade, Peso, ID_Tutor) 
+VALUES (10, 'Nina', 'Gato', 'Maine Coon', '5 anos', '8 kg', 10);
+
+CREATE TABLE Veterinario (
+    ID_Veterinario INTEGER PRIMARY KEY,
+    Nome VARCHAR(100),
+    Especialidade VARCHAR(100),
+    Telefone VARCHAR(100),
+    Email VARCHAR(100)
+);
+
+INSERT INTO Veterinario (ID_Veterinario, Nome, Especialidade, Telefone, Email) 
+VALUES (1, 'Dr. Eduardo Silva', 'Cardiologia', '11987654331', 'eduardo.silva@gmail.com');
+
+INSERT INTO Veterinario (ID_Veterinario, Nome, Especialidade, Telefone, Email) 
+VALUES (2, 'Dra. Carolina Torres', 'Dermatologia', '11987654332', 'carolina.torres@gmail.com');
+
+INSERT INTO Veterinario (ID_Veterinario, Nome, Especialidade, Telefone, Email) 
+VALUES (3, 'Dr. Felipe Souza', 'Ortopedia', '11987654333', 'felipe.souza@gmail.com');
+
+INSERT INTO Veterinario (ID_Veterinario, Nome, Especialidade, Telefone, Email) 
+VALUES (4, 'Dra. Renata Lopes', 'Oftalmologia', '11987654334', 'renata.lopes@gmail.com');
+
+INSERT INTO Veterinario (ID_Veterinario, Nome, Especialidade, Telefone, Email) 
+VALUES (5, 'Dr. Bruno Lima', 'Oncologia', '11987654335', 'bruno.lima@gmail.com');
+
+INSERT INTO Veterinario (ID_Veterinario, Nome, Especialidade, Telefone, Email) 
+VALUES (6, 'Dra. Fernanda Almeida', 'Cirurgia', '11987654336', 'fernanda.almeida@gmail.com');
+
+INSERT INTO Veterinario (ID_Veterinario, Nome, Especialidade, Telefone, Email) 
+VALUES (7, 'Dr. Lucas Pereira', 'Anestesiologia', '11987654337', 'lucas.pereira@gmail.com');
+
+INSERT INTO Veterinario (ID_Veterinario, Nome, Especialidade, Telefone, Email) 
+VALUES (8, 'Dra. Amanda Costa', 'Radiologia', '11987654338', 'amanda.costa@gmail.com');
+
+INSERT INTO Veterinario (ID_Veterinario, Nome, Especialidade, Telefone, Email) 
+VALUES (9, 'Dr. Gustavo Martins', 'Odontologia', '11987654339', 'gustavo.martins@gmail.com');
+
+INSERT INTO Veterinario (ID_Veterinario, Nome, Especialidade, Telefone, Email) 
+VALUES (10, 'Dra. Paula Ferreira', 'Neurologia', '11987654340', 'paula.ferreira@gmail.com');
+
+CREATE TABLE Agendamento (
+    ID_Agendamento INTEGER PRIMARY KEY,
+    DataHora TIMESTAMP,
+    Motivo VARCHAR(100),
+    ID_Veterinario INTEGER,
+    ID_Paciente INTEGER, 
+    CONSTRAINT FK_Agendamento_Veterinario FOREIGN KEY (ID_Veterinario) REFERENCES Veterinario (ID_Veterinario),
+    CONSTRAINT FK_Agendamento_Paciente FOREIGN KEY (ID_Paciente) REFERENCES Paciente (ID_Paciente)
+);
+
+INSERT INTO Agendamento (ID_Agendamento, DataHora, Motivo, ID_Veterinario, ID_Paciente) 
+VALUES (1, '2024-09-10 09:00:00', 'Consulta de rotina', 1, 1);
+
+INSERT INTO Agendamento (ID_Agendamento, DataHora, Motivo, ID_Veterinario, ID_Paciente) 
+VALUES (2, '2024-09-10 10:00:00', 'Exame dermatológico', 2, 2);
+
+INSERT INTO Agendamento (ID_Agendamento, DataHora, Motivo, ID_Veterinario, ID_Paciente) 
+VALUES (3, '2024-09-10 11:00:00', 'Radiografia', 8, 3);
+
+INSERT INTO Agendamento (ID_Agendamento, DataHora, Motivo, ID_Veterinario, ID_Paciente) 
+VALUES (4, '2024-09-11 09:00:00', 'Consulta ortopédica', 3, 4);
+
+INSERT INTO Agendamento (ID_Agendamento, DataHora, Motivo, ID_Veterinario, ID_Paciente) 
+VALUES (5, '2024-09-11 10:00:00', 'Check-up geral', 1, 5);
+
+INSERT INTO Agendamento (ID_Agendamento, DataHora, Motivo, ID_Veterinario, ID_Paciente) 
+VALUES (6, '2024-09-11 11:00:00', 'Consulta oftalmológica', 4, 6);
+
+INSERT INTO Agendamento (ID_Agendamento, DataHora, Motivo, ID_Veterinario, ID_Paciente) 
+VALUES (7, '2024-09-12 09:00:00', 'Cirurgia de castração', 6, 7);
+
+INSERT INTO Agendamento (ID_Agendamento, DataHora, Motivo, ID_Veterinario, ID_Paciente) 
+VALUES (8, '2024-09-12 10:00:00', 'Consulta odontológica', 9, 8);
+
+INSERT INTO Agendamento (ID_Agendamento, DataHora, Motivo, ID_Veterinario, ID_Paciente) 
+VALUES (9, '2024-09-12 11:00:00', 'Exame neurológico', 10, 9);
+
+INSERT INTO Agendamento (ID_Agendamento, DataHora, Motivo, ID_Veterinario, ID_Paciente) 
+VALUES (10, '2024-09-13 09:00:00', 'Exame cardiológico', 1, 10);
+
+CREATE TABLE Medicamentos (
+    ID_Medicamento INTEGER PRIMARY KEY,
+    Nome VARCHAR(100),
+    Descricao VARCHAR(100),
+    Preco NUMERIC(10, 2)
+);
+
+INSERT INTO Medicamentos (ID_Medicamento, Nome, Descricao, Preco) 
+VALUES (1, 'Antibiótico Canino', 'Uso para infecções bacterianas', 49.90);
+
+INSERT INTO Medicamentos (ID_Medicamento, Nome, Descricao, Preco) 
+VALUES (2, 'Anti-inflamatório Felino', 'Controle de inflamação', 59.90);
+
+INSERT INTO Medicamentos (ID_Medicamento, Nome, Descricao, Preco) 
+VALUES (3, 'Analgésico para cães', 'Alívio de dor', 29.90);
+
+INSERT INTO Medicamentos (ID_Medicamento, Nome, Descricao, Preco) 
+VALUES (4, 'Colírio Oftalmológico', 'Tratamento de inflamações oculares', 39.90);
+
+INSERT INTO Medicamentos (ID_Medicamento, Nome, Descricao, Preco) 
+VALUES (5, 'Suplemento vitamínico', 'Fortalecimento imunológico', 19.90);
+
+INSERT INTO Medicamentos (ID_Medicamento, Nome, Descricao, Preco) 
+VALUES (6, 'Antiparasitário', 'Controle de vermes e parasitas', 25.90);
+
+INSERT INTO Medicamentos (ID_Medicamento, Nome, Descricao, Preco) 
+VALUES (7, 'Anticonvulsivante', 'Controle de convulsões', 69.90);
+
+INSERT INTO Medicamentos (ID_Medicamento, Nome, Descricao, Preco) 
+VALUES (8, 'Solução Otológica', 'Tratamento de otites', 35.90);
+
+INSERT INTO Medicamentos (ID_Medicamento, Nome, Descricao, Preco) 
+VALUES (9, 'Spray cicatrizante', 'Cicatrização de feridas', 24.90);
+
+INSERT INTO Medicamentos (ID_Medicamento, Nome, Descricao, Preco) 
+VALUES (10, 'Xarope expectorante', 'Alívio de tosse', 14.90);
+
+CREATE TABLE Receita (
+    ID_Receita INTEGER PRIMARY KEY,
+    ID_Agendamento INTEGER,
+    Emissao DATE,
+    CONSTRAINT FK_Receita_Agendamento FOREIGN KEY (ID_Agendamento) REFERENCES Agendamento (ID_Agendamento)
+);
+INSERT INTO Receita (ID_Receita, ID_Agendamento, Emissao) 
+VALUES (1, 1, '2024-09-10');
+
+INSERT INTO Receita (ID_Receita, ID_Agendamento, Emissao) 
+VALUES (2, 2, '2024-09-10');
+
+INSERT INTO Receita (ID_Receita, ID_Agendamento, Emissao) 
+VALUES (3, 3, '2024-09-10');
+
+INSERT INTO Receita (ID_Receita, ID_Agendamento, Emissao) 
+VALUES (4, 4, '2024-09-11');
+
+INSERT INTO Receita (ID_Receita, ID_Agendamento, Emissao) 
+VALUES (5, 5, '2024-09-11');
+
+INSERT INTO Receita (ID_Receita, ID_Agendamento, Emissao) 
+VALUES (6, 6, '2024-09-11');
+
+INSERT INTO Receita (ID_Receita, ID_Agendamento, Emissao) 
+VALUES (7, 7, '2024-09-12');
+
+INSERT INTO Receita (ID_Receita, ID_Agendamento, Emissao) 
+VALUES (8, 8, '2024-09-12');
+
+INSERT INTO Receita (ID_Receita, ID_Agendamento, Emissao) 
+VALUES (9, 9, '2024-09-12');
+
+INSERT INTO Receita (ID_Receita, ID_Agendamento, Emissao) 
+VALUES (10, 10, '2024-09-13');
+
+
+CREATE TABLE Itens_Receita (
+    ID_item INTEGER PRIMARY KEY,
+    Quantidade VARCHAR(100),
+    Dosagem VARCHAR(100),
+    ID_Medicamento INTEGER,
+    ID_Receita INTEGER,
+    CONSTRAINT FK_Itens_Receita_Receita FOREIGN KEY (ID_Receita) REFERENCES Receita (ID_Receita),
+    CONSTRAINT FK_Itens_Receita_Medicamento FOREIGN KEY (ID_Medicamento) REFERENCES Medicamentos (ID_Medicamento)
+);
+
+
+INSERT INTO Itens_Receita (ID_item, Quantidade, Dosagem, ID_Medicamento, ID_Receita) 
+VALUES (1, '2 caixas', '500 mg', 1, 1);
+
+INSERT INTO Itens_Receita (ID_item, Quantidade, Dosagem, ID_Medicamento, ID_Receita) 
+VALUES (2, '1 frasco', '5 ml', 2, 2);
+
+INSERT INTO Itens_Receita (ID_item, Quantidade, Dosagem, ID_Medicamento, ID_Receita) 
+VALUES (3, '1 caixa', '50 mg', 3, 3);
+
+INSERT INTO Itens_Receita (ID_item, Quantidade, Dosagem, ID_Medicamento, ID_Receita) 
+VALUES (4, '1 frasco', '10 ml', 4, 4);
+
+INSERT INTO Itens_Receita (ID_item, Quantidade, Dosagem, ID_Medicamento, ID_Receita) 
+VALUES (5, '2 frascos', '20 ml', 5, 5);
+
+INSERT INTO Itens_Receita (ID_item, Quantidade, Dosagem, ID_Medicamento, ID_Receita)
+VALUES (6, '1 caixa', '300 mg', 6, 6);
+
+INSERT INTO Itens_Receita (ID_item, Quantidade, Dosagem, ID_Medicamento, ID_Receita) 
+VALUES (7, '3 comprimidos', '250 mg', 7, 7);
+
+INSERT INTO Itens_Receita (ID_item, Quantidade, Dosagem, ID_Medicamento, ID_Receita) 
+VALUES (8, '2 frascos', '5 ml', 8, 8);
+
+INSERT INTO Itens_Receita (ID_item, Quantidade, Dosagem, ID_Medicamento, ID_Receita) 
+VALUES (9, '1 frasco', '15 ml', 9, 9);
+
+INSERT INTO Itens_Receita (ID_item, Quantidade, Dosagem, ID_Medicamento, ID_Receita) 
+VALUES (10, '2 caixas', '100 ml', 10, 10);
+
